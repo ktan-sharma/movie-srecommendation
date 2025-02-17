@@ -1,0 +1,82 @@
+project/Movie site/movie.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details - MovieCritic</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MovieCritic</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Latest Reviews</a>
+                <a href="#">Top Rated</a>
+                <button id="loginBtn" class="login-btn">Login</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login/Register Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <!-- Login Section -->
+            <div id="loginSection">
+                <h2 class="auth-title">Login to MovieCritic</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-button">Login</button>
+                </form>
+                <div class="auth-switch">
+                    <p>New to MovieCritic? <a id="showRegister">Register</a></p>
+                </div>
+            </div>
+
+            <!-- Register Section -->
+            <div id="registerSection" style="display: none;">
+                <h2 class="auth-title">Create Account</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <input type="text" id="registerName" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="registerEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="registerPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-button">Create Account</button>
+                </form>
+                <div class="auth-switch">
+                    <p>Already have an account? <a id="showLogin">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="movie-details" id="movieDetails">
+                <div class="loading">Loading movies...</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieCritic. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./auth.js"></script>
+    <script type="module" src="./movieDetails.js"></script>
+</body>
+</html>

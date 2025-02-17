@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - MovieCritic</title>
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MovieCritic</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Latest Reviews</a>
+                <a href="#">Top Rated</a>
+                <div class="user-profile">
+                    <img id="navAvatar" src="./default-avatar.png" alt="Profile" class="profile-pic">
+                    <div class="profile-dropdown">
+                        <a href="profile.html" class="active">My Profile</a>
+                        <a href="watchlist.html">My Watchlist</a>
+                        <a href="reviews.html">My Reviews</a>
+                        <button id="navLogoutBtn" class="dropdown-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <div class="avatar-section">
+                <div class="avatar-container">
+                    <img id="avatarPreview" src="./default-avatar.png" alt="Profile Picture">
+                    <div class="avatar-overlay">
+                        <label for="avatarInput" class="change-avatar-label">
+                            Change Picture
+                            <input type="file" id="avatarInput" accept="image/*" hidden>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-info">
+                <h2 id="profileName">Loading...</h2>
+                <p id="profileEmail">Loading...</p>
+            </div>
+        </div>
+        
+        <div class="profile-content">
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <h3>Movies Watched</h3>
+                    <p id="watchedCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Reviews Written</h3>
+                    <p id="reviewCount">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Average Rating</h3>
+                    <p id="avgRating">0.0</p>
+                </div>
+            </div>
+
+            <div class="watchlist-section">
+                <h3>My Watchlist</h3>
+                <div id="watchlist" class="movie-grid">
+                    <!-- Watchlist movies will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="reviews-section">
+                <h3>My Reviews</h3>
+                <div id="userReviews" class="reviews-grid">
+                    <!-- User reviews will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieCritic. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./auth.js"></script>
+    <script type="module" src="./profile.js"></script>
+</body>
+</html>

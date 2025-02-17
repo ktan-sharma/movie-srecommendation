@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist - MovieCritic</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>MovieCritic</h1>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Latest Reviews</a>
+                <a href="#">Top Rated</a>
+                <div class="user-profile">
+                    <div class="profile-icon" id="profileIcon" title="Click to change profile picture"></div>
+                    <div class="profile-dropdown">
+                        <a href="profile.html">My Profile</a>
+                        <a href="watchlist.html" class="active">My Watchlist</a>
+                        <a href="reviews.html">My Reviews</a>
+                        <button id="logoutBtn" class="dropdown-btn">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="watchlist-section">
+            <h2>My Watchlist</h2>
+            <div id="watchlistContainer" class="watchlist-grid">
+                <!-- Watchlist items will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieCritic. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="./config.js"></script>
+    <script type="module" src="./auth.js"></script>
+    <script type="module" src="./watchlist.js"></script>
+</body>
+</html>
